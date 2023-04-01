@@ -1,0 +1,24 @@
+<hibernate-configuration>
+
+    <session-factory>
+        <property name="connection.driver_class">org.postgresql.Driver</property>
+        <property name="connection.url">jdbc:postgresql://localhost:5455/postgres</property>
+        <property name="connection.username">kekNya</property>
+        <property name="connection.password">f8wy3dmi</property>
+
+        <property name="connection.pool_size">1</property>
+        <property name="show_sql">true</property>
+        <property name="current_session_context_class">thread</property>
+        <property name="hbm2ddl.auto">create-drop</property>
+
+        <property name="hibernate.dbcp.initialSize">5</property>
+        <property name="hibernate.dbcp.maxTotal">20</property>
+        <property name="hibernate.dbcp.maxIdle">10</property>
+        <property name="hibernate.dbcp.minIdle">5</property>
+        <property name="hibernate.dbcp.maxWaitMillis">-1</property>
+
+        <mapping class="org.sl.entity.Student" />
+
+    </session-factory>
+
+</hibernate-configuration>
